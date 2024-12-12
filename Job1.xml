@@ -70,7 +70,7 @@ echo &quot;----------Prom Env Test End----------&quot;</command>
                 <noDefaultExcludes>false</noDefaultExcludes>
                 <makeEmptyDirs>false</makeEmptyDirs>
                 <patternSeparator>[, ]+</patternSeparator>
-                <execCommand>echo 12345 | sudo -S service nginx restart</execCommand>
+                <execCommand>sudo service nginx restart</execCommand>
                 <execTimeout>120000</execTimeout>
                 <usePty>false</usePty>
                 <useAgentForwarding>false</useAgentForwarding>
