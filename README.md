@@ -5,12 +5,12 @@
 
 На стороне сервера pr_server сгенерирован RSA-ключ и отправлен на сторону клиента pr_app. Подключение через команду `ssh` прошло успешно
 
-im1
+![img1.png](res/openssh.png)
 
 ## 2. Jenkins
 На сторону сервера был установлен и запущен Jenkins. В качестве плагинов были дополнительно установлены GIT, Publish Over SSH и GitHub. Также был создан основной пользователь (Maxim Shushakov)
 
-im2
+![img2.png](res/acc.png)
 
 Далее был создан репозиторий Jenkins-Test, на который был выложен index.html с кодом, указанным в задании.
 
@@ -18,25 +18,25 @@ im2
 
 Публичный ключ был дописан в файл с авторизованными ключами на стороне ВМ pr_app, а приватный ключ добавлен в настройки Jenkins, с указанием адреса ВМ pr_app, а также имени её пользователя и директории, с которой будет взаимодействовать Jenkins. Проверка соединения прошла успешно.
 
-im3
+![img3.png](res/jenkins_key.png)
 
-im4
+![img4.png](res/jenkins_test.png)
 
 Далее был создан и настроен Jenkins Job, с добавлением двух шагов Execute Shell и конфигурацией Post-build Actions 
 
-im5
+![img5.png](res/steps.png)
 
 Для связи Jenkins и GitHub на стороне сервера pr_server был сгенерирован ключ. Публичная часть была добавлена на GitHub, приватная часть добавлена в настройки Jenkins Job
 
-im6
+![img6.png](res/git_private.png)
 
-im7
+![img7.png](res/git_public.png)
 
 Далее был проведен запуск полученного Jenkins Job. Запуск прошёл успешно, страница index.html на стороне ВМ pr_app изменилась.
 
-im8
+![img8.png](res/job_success.png)
 
-im9
+![img9.png](res/web_page.png)
 
 Конфигурация Jenkins Job была экспортирована и выложена в этот репозиторий в виде файла Job1.xml.
 
