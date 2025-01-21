@@ -30,7 +30,7 @@
 
 ![img6.png](res/git_private.png)
 
-![img7.png](res/git_public.png)
+![img7.png](res/git_public_key.png)
 
 Далее был проведен запуск полученного Jenkins Job. Запуск прошёл успешно, страница index.html на стороне ВМ pr_app изменилась.
 
